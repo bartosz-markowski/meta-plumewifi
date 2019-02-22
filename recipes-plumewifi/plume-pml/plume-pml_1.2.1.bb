@@ -15,8 +15,11 @@ DEPENDS += "openssl"
 
 PV .= "+git${SRCPV}"
 
-SRCREV_pml = "5e9a15821f31ce2cb4c26fcdfcb714c2cf468b7a"
-SRCREV_vendor = "a0708250325f02983cb7c5e4c73f3538e475f01e"
+# Warning: Builds created from recipes using AUTOREV are not reproducible
+# and so should be used for development only (not for creating releases).
+
+SRCREV_pml = "${AUTOREV}"
+SRCREV_vendor = "${AUTOREV}"
 SRCREV_FORMAT = "pml_vendor"
 
 SRC_URI = "${PLUME_GIT}/plume-pml.git;protocol=ssh;destsuffix=git/plume-pml;name=pml;branch=osync_1.2.1 \
