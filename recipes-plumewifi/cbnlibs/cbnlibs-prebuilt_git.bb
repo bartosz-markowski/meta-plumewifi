@@ -7,7 +7,10 @@ PV = "0.0+git${SRCPV}"
 # etc, etc) but it's a convenient way to fetch a well defined version of the
 # CBN prebuilt libs.
 
-SRCREV = "e2e23eb598ba40e35b838c73b1c5677bce835f32"
+# Warning: Builds created from recipes using AUTOREV are not reproducible
+# and so should be used for development only (not for creating releases).
+
+SRCREV = "${AUTOREV}"
 
 SRC_URI = "${PLUME_GIT}/sdk-lgi-isdk-ch7465ce.git;protocol=ssh"
 
